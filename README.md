@@ -32,3 +32,6 @@ npm run lint
 - prettier
 - vue-router
 - vuex
+- sweetalert2
+- vue-sweetalert2
+- axios
