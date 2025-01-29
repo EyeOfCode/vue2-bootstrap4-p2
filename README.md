@@ -35,3 +35,4 @@ npm run lint
 - sweetalert2
 - vue-sweetalert2
 - sass sass-loader
+- owl-carousel

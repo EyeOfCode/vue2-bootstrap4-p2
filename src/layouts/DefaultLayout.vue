@@ -4,7 +4,7 @@
       <TopHeader />
       <SubHeader />
     </div>
-    <div class="container" style="margin-top: 155px">
+    <div style="margin-top: 155px">
       <slot />
     </div>
     <Footer />
