@@ -34,4 +34,4 @@ npm run lint
 - vuex
 - sweetalert2
 - vue-sweetalert2
-- axios
+- sass sass-loader

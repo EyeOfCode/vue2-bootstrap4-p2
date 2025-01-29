@@ -1,37 +1,50 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Vue 2 Template</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
+  <div class="top-0 w-100">
+    <div
+      class="d-md-flex top-header d-none align-items-center justify-content-between"
     >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav" @click="closeMenu">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <router-link class="nav-link" to="/" exact-active-class="active">
-            Home
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/about" active-class="active">
-            About
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/user" active-class="active">
-            User
-          </router-link>
-        </li>
-      </ul>
+      <div class="d-flex align-items-center">
+        <div class="text-header">
+          <div class="px-1 cursor-pointer">Why KisanKonnect?</div>
+        </div>
+        <div class="text-header">
+          <div class="px-1">Download App</div>
+        </div>
+        <div class="d-flex align-items-center">
+          <img
+            class="icon-app mx-2"
+            src="@/assets/icons/App-store.svg"
+            alt="app-store"
+          />
+          <img
+            class="icon-app mx-2"
+            src="@/assets/icons/Playstore.svg"
+            alt="play-store"
+          />
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <div class="text-header">
+          <div class="px-1 cursor-pointer">About Us</div>
+        </div>
+        <div class="text-header">
+          <div class="px-1 cursor-pointer">Careers@KisanKonnect</div>
+        </div>
+        <div>
+          <div class="px-1 cursor-pointer">Contact Us</div>
+        </div>
+      </div>
     </div>
-  </nav>
+    <div class="bg-white border-bottom">
+      <div class="p-2">
+        <img
+          class="logo-img"
+          src="@/assets/images/kisankonnect_logo.svg"
+          alt="logo"
+        />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -47,12 +60,31 @@ export default {
 </script>
 
 <style scoped>
-.active {
-  border-bottom: 2px solid green;
-  padding-bottom: 2px;
+.border-bottom {
+  box-shadow: 0 10px 10px #00000014;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
 }
-.nav-link:hover {
-  border-bottom: 2px solid gray;
-  padding-bottom: 2px;
+.icon-app {
+  max-width: 28px;
+}
+.logo-img {
+  max-width: 90px;
+}
+.top-header {
+  background: #f7f7f7;
+  height: 60px;
+  padding: 0 3.5rem 0 8.25rem;
+  font-weight: 500;
+  font-size: 15px;
+  color: #262726;
+
+  .text-header {
+    border-right: 2px solid #919191;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
 }
 </style>
