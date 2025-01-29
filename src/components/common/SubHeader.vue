@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white border-bottom">
-    <div class="my-1 d-md-flex align-items-center justify-content-between">
+    <div class="py-1 d-md-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center">
         <div>
           <img
