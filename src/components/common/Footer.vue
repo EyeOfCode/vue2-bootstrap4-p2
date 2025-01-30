@@ -57,21 +57,26 @@
                       alt="Google-play"
                     />
                   </li>
-                  <li class="social-btn socialbtn_btn">
-                    <img
-                      src="@/assets/icons/facebook-ic.svg"
-                      alt="facebook-ic"
-                    />
-                  </li>
-                  <li class="social-btn socialbtn_btn">
-                    <img src="@/assets/icons/insta.png" alt="insta" />
-                  </li>
-                  <li class="social-btn socialbtn_btn">
-                    <img src="@/assets/icons/linkedin.png" alt="linkedin" />
-                  </li>
-                  <li class="social-btn socialbtn_btn">
-                    <img src="@/assets/icons/twitter-ic.svg" alt="twitter-ic" />
-                  </li>
+                  <div class="d-flex align-items-center">
+                    <li class="social-btn socialbtn_btn">
+                      <img
+                        src="@/assets/icons/facebook-ic.svg"
+                        alt="facebook-ic"
+                      />
+                    </li>
+                    <li class="social-btn socialbtn_btn">
+                      <img src="@/assets/icons/insta.png" alt="insta" />
+                    </li>
+                    <li class="social-btn socialbtn_btn">
+                      <img src="@/assets/icons/linkedin.png" alt="linkedin" />
+                    </li>
+                    <li class="social-btn socialbtn_btn">
+                      <img
+                        src="@/assets/icons/twitter-ic.svg"
+                        alt="twitter-ic"
+                      />
+                    </li>
+                  </div>
                 </ul>
                 <p>
                   © 2023, KisanKonnect |
@@ -87,7 +92,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6 col-lg-4">
+        <div class="d-none d-md-block col-6 col-lg-4">
           <div class="footer_item footer_menu">
             <div class="footer-img">
               <img
@@ -204,6 +209,7 @@ export default {
   top: 33px;
   display: block;
 }
+
 .footer:before {
   content: '';
   position: absolute;
@@ -215,5 +221,27 @@ export default {
   background-image: linear-gradient(327deg, #1e8c42 0%, #0b7c3c 74%);
   border-radius: 50% 50% 0 0 / 100% 100% 0 0;
   transform: scaleX(1.5);
+}
+
+@media screen and (max-width: 767px) {
+  .footer:before {
+    border-radius: 0 !important;
+  }
+
+  .social-icons {
+    display: block;
+  }
+
+  .social-btn {
+    margin: 15px;
+  }
+
+  .socialbtn_btn {
+    max-width: 40px;
+  }
+
+  .social-btn.socialbtn_btn {
+    margin: 0px !important;
+  }
 }
 </style>

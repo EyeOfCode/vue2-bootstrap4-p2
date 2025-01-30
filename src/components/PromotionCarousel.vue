@@ -8,6 +8,8 @@
       :center="true"
       :nav="false"
       :dots="false"
+      :autoplayHoverPause="false"
+      :autoplayTimeout="3000"
       :responsive="{
         0: {
           items: 2,
@@ -76,6 +78,6 @@ export default {
 .item img {
   width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 </style>

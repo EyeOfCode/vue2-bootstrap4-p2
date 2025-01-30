@@ -7,3 +7,11 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 100%;
+}
