@@ -1,11 +1,11 @@
 <template>
   <div class="d-flex flex-column justify-content-center align-items-center">
-    <div class="card">
-      <div class="card-body p-0">
+    <div class="card w-100">
+      <div class="card-body p-0 w-100">
         <img :src="image || require('@/assets/images/cart.jpg')" :alt="title" />
       </div>
     </div>
-    <div class="py-3 text-center title-text">{{ title }}</div>
+    <div class="py-3 text-center" :style="styleTitle">{{ title }}</div>
   </div>
 </template>
 
@@ -16,6 +16,14 @@ export default {
     title: {
       type: String,
       required: true,
+    },
+    styleTitle: {
+      type: Object,
+      default: () => ({
+        fontSize: '1.3rem',
+        fontWeight: '500',
+        lineHeight: '1.4',
+      }),
     },
     image: {
       type: String,
@@ -33,16 +41,18 @@ export default {
   align-items: center;
 }
 
-.title-text {
-  font-size: 1.3rem;
-  line-height: 1.4;
-  font-weight: 500;
-}
-
 .card img {
   width: 100%;
   object-fit: cover;
   border-radius: 1rem;
   box-shadow: #63636333 0 2px 8px;
+  min-height: 115px;
+}
+
+@media screen and (min-width: 767px) {
+  .card img {
+    object-fit: contain;
+    max-height: 200px;
+  }
 }
 </style>

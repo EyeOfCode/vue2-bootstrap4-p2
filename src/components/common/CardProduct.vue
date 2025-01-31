@@ -11,7 +11,8 @@
     </div>
     <div class="card-header">
       <img
-        :src="image || require('@/assets/images/cart.jpg')"
+        :style="image.style"
+        :src="image.url || require('@/assets/images/cart.jpg')"
         :alt="badgeTop.name"
       />
     </div>
@@ -51,8 +52,15 @@ export default {
       }),
     },
     image: {
-      type: String,
-      required: true,
+      type: Object,
+      default: () => ({
+        url: null,
+        style: {
+          width: '100%',
+          height: '100%',
+          margin: '0 auto',
+        },
+      }),
     },
     title: {
       type: String,
@@ -63,11 +71,11 @@ export default {
       default: null,
     },
     price: {
-      type: String,
+      type: Number,
       required: true,
     },
     discount: {
-      type: String,
+      type: Number,
       required: true,
     },
   },
@@ -79,6 +87,9 @@ export default {
   font-size: 15px;
   line-height: 21px;
   font-weight: 500;
+  display: flex;
+  justify-content: end;
+  padding: 5px;
 }
 
 .btn-success {
@@ -90,11 +101,11 @@ export default {
 }
 
 .footer-text {
-  white-space: nowrap;
   display: flex;
+  white-space: nowrap;
   align-items: center;
   gap: 0.5rem;
-  justify-content: center;
+  padding: 5px;
 
   del {
     font-size: 13px;
@@ -141,6 +152,7 @@ export default {
 .card-header {
   border: 0;
   background: #ffffff;
+  border-radius: 5px;
 }
 
 .card-body {
@@ -149,10 +161,11 @@ export default {
 
 .card-footer {
   background-color: #fffce9;
+  border-bottom-right-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
 }
 
 .card {
-  max-width: 184px;
   border-radius: 5px;
   position: relative;
   width: 100%;
