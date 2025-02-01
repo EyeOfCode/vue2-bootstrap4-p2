@@ -74,7 +74,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .text-footer {
   font-size: 18px;
   padding: 10px 0;

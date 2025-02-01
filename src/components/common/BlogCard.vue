@@ -92,7 +92,7 @@ export default {
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  height: 100px;
+  height: 93px;
 }
 
 .text-link {

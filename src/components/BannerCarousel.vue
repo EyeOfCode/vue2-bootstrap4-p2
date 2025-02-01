@@ -25,6 +25,7 @@
           :title="item.title"
           :image="item.image"
           :style-title="item.styleTitle"
+          :style-image="item.styleImage"
         />
       </div>
     </owl-carousel>
@@ -53,7 +54,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .carousel-wrapper {
   width: 100%;
   position: relative;

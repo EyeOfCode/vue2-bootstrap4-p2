@@ -8,6 +8,9 @@ export const mockBannerData = [
       lineHeight: '1.2',
       fontWeight: '500',
     },
+    styleImage: {
+      height: '115px',
+    },
   },
   {
     title:
@@ -19,6 +22,9 @@ export const mockBannerData = [
       lineHeight: '1.2',
       fontWeight: '500',
     },
+    styleImage: {
+      height: '115px',
+    },
   },
   {
     title: 'Shilpa Shetty invests in agri-tech company Kisankonnect',
@@ -28,6 +34,9 @@ export const mockBannerData = [
       fontSize: '14px',
       lineHeight: '1.2',
       fontWeight: '500',
+    },
+    styleImage: {
+      height: '115px',
     },
   },
   {
@@ -39,6 +48,9 @@ export const mockBannerData = [
       fontSize: '14px',
       lineHeight: '1.2',
       fontWeight: '500',
+    },
+    styleImage: {
+      height: '115px',
     },
   },
 ];

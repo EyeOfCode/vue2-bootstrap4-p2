@@ -2,26 +2,33 @@
   <div class="carousel-wrapper">
     <owl-carousel
       class="owl-theme"
-      :items="2"
-      :margin="30"
+      :items="5"
+      :margin="20"
       :loop="true"
-      :autoplay="autoplay"
+      :autoplay="true"
       :nav="false"
-      :dots="dots"
-      :dotsEach="dots"
+      :dots="true"
+      :dotsEach="true"
       :autoplayHoverPause="false"
       :autoplayTimeout="6000"
-      :responsive="responsive"
-      :mouseDrag="mouseDrag"
+      :responsive="{
+        0: {
+          items: 1,
+        },
+        768: {
+          items: 3,
+        },
+        1024: {
+          items: 5,
+        },
+      }"
     >
       <div class="item w-100" v-for="item in items" :key="item.title">
-        <CardProduct
-          :badge="item.badge"
-          :badge-top="item.badgeTop"
-          :discount="item.discount"
+        <ProfileCard
           :image="item.image"
-          :price="item.price"
           :title="item.title"
+          :footer="item.footer"
+          :description="item.description"
         />
       </div>
     </owl-carousel>
@@ -32,50 +39,24 @@
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import OwlCarousel from 'vue-owl-carousel';
-import CardProduct from './common/CardProduct.vue';
+import ProfileCard from './common/ProfileCard.vue';
 
 export default {
-  name: 'SellCarousel',
+  name: 'ProfileCarousel',
   components: {
     'owl-carousel': OwlCarousel,
-    CardProduct,
+    ProfileCard,
   },
   props: {
     items: {
       type: Array,
       required: true,
     },
-    autoplay: {
-      type: Boolean,
-      default: true,
-    },
-    dots: {
-      type: Boolean,
-      default: true,
-    },
-    mouseDrag: {
-      type: Boolean,
-      default: true,
-    },
-    responsive: {
-      type: Object,
-      default: () => ({
-        0: {
-          items: 1,
-        },
-        768: {
-          items: 2,
-        },
-        1024: {
-          items: 4,
-        },
-      }),
-    },
   },
 };
 </script>
 
-<style scoped>
+<style>
 .carousel-wrapper {
   width: 100%;
   position: relative;

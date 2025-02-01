@@ -2,7 +2,11 @@
   <div class="d-flex flex-column justify-content-center align-items-center">
     <div class="card w-100">
       <div class="card-body p-0 w-100">
-        <img :src="image || require('@/assets/images/cart.jpg')" :alt="title" />
+        <img
+          :src="image || require('@/assets/images/cart.jpg')"
+          :alt="title"
+          :style="styleImage"
+        />
       </div>
     </div>
     <div class="py-3 text-center" :style="styleTitle">{{ title }}</div>
@@ -29,6 +33,12 @@ export default {
       type: String,
       default: null,
     },
+    styleImage: {
+      type: Object,
+      default: () => ({
+        minHeight: '115px',
+      }),
+    },
   },
 };
 </script>
@@ -46,7 +56,6 @@ export default {
   object-fit: cover;
   border-radius: 1rem;
   box-shadow: #63636333 0 2px 8px;
-  min-height: 115px;
 }
 
 @media screen and (min-width: 767px) {

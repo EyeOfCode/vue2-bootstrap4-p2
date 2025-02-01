@@ -88,7 +88,9 @@
     </div>
     <div class="container-box">
       <div class="title text-center py-5">Kisan Kommunity</div>
-      <div class="w-100 fit-content">Profile</div>
+      <div class="w-100 fit-content">
+        <ProfileCarousel :items="profiles" />
+      </div>
       <div class="text-center">
         <a href="#" class="text-link">View All...</a>
       </div>
@@ -122,6 +124,8 @@ import SellCarousel from '@/components/SellCarousel.vue';
 import { mockBlogData } from '@/assets/constants/blogData';
 import BannerCarousel from '@/components/BannerCarousel.vue';
 import { mockBannerData } from '@/assets/constants/bannerData';
+import ProfileCarousel from '@/components/ProfileCarousel.vue';
+import { mockProfileData } from '@/assets/constants/profileData';
 
 export default {
   name: 'Home',
@@ -133,6 +137,7 @@ export default {
     SellCarousel,
     BlogCarousel,
     BannerCarousel,
+    ProfileCarousel,
   },
   data() {
     return {
@@ -144,6 +149,7 @@ export default {
       productFruit: mockProductFruitData,
       blogs: mockBlogData,
       banners: mockBannerData,
+      profiles: mockProfileData,
       windowWidth: window.innerWidth,
     };
   },
